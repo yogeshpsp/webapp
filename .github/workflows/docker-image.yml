@@ -16,7 +16,7 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build the Docker image
       run: |
-       docker login -u "yogeshpsp" --password-stdin
+       echo "${{secrets.DOCKERPW}}"docker login -u "yogeshpsp" --password-stdin
        docker build . --file Dockerfile --tag yogeshpsp/webapp 
        docker push yogeshpsp/webapp
         
