@@ -15,4 +15,10 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag yogeshpsp/webapp
+      run: |
+       docker login -u "yogeshpsp" --password-stdin
+       docker build . --file Dockerfile --tag yogeshpsp/webapp 
+       docker push yogeshpsp/webapp
+        
+        
+      
