@@ -1,5 +1,5 @@
 FROM node
 WORKDIR /usr/src/app
-COPY dist/ .
+COPY . .
 EXPOSE 4200
 CMD [ "npm","start" ]
