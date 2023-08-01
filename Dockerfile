@@ -1,6 +1,5 @@
 FROM node
 WORKDIR /usr/src/app
-COPY . .
-RUN npm install && ng build
+COPY dist/ .
 EXPOSE 4200
 CMD [ "npm","start" ]
