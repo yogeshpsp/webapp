@@ -13,3 +13,4 @@ spec:
       old: old
       test: 1
       test: using_python
+      new: line
