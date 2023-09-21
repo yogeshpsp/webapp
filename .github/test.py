@@ -1,6 +1,6 @@
 import yaml
-with open ('test.yaml','r') as file:
+with open ('test.yaml','r') as stream:
   yaml_content=yaml.safe_load(file)
-data=yaml_content['configmap']
-for key, value in data.items():
-    print(f'{key}: {value}')
+  if 'value' in value:
+    for key, value in value['value'].items():
+      print(f"{key}: {value}")
