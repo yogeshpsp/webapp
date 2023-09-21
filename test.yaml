@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Configmap
+metadata:
+    name: test
+spec:
+    configmap:
+      values:
+        key1: value1
+        key2: value2
+    data:
+      new: new
+      old: old
