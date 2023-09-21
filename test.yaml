@@ -6,7 +6,7 @@ spec:
     configmap:
       value:
         key1: true
-        key2: value2
+        key2: false
     data:
       new: new
       old: old
