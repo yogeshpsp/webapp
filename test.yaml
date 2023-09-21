@@ -10,3 +10,4 @@ spec:
     data:
       new: new
       old: old
+      test: 1
