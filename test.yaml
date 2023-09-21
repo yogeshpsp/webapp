@@ -4,8 +4,8 @@ metadata:
     name: test
 spec:
     configmap:
-      values:
-        key1: value1
+      value:
+        key1: true
         key2: value2
     data:
       new: new
