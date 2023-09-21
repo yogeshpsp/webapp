@@ -11,3 +11,4 @@ spec:
       new: new
       old: old
       test: 1
+      test: using_python
