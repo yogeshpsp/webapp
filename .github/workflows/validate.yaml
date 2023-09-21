@@ -11,11 +11,13 @@ jobs:
     steps:
     - name: checkout
       uses: actions/checkout@v2
+    - name: setup python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.x
     - name: validate
       run: |
-        import yaml
-        with open ('test.yaml','r') as file:
-          yaml_content=yaml.safe_load(file)
-          data=yaml_content['values']
-          for key, value in data.items()
-            print(f'{key}: {value}')
+        python -m pip install --upgrade pip
+        pip install pyyaml
+    - name: yaml validate
+      run: python .github/test.py
