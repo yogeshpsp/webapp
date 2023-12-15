@@ -1,10 +1,12 @@
 pipeline {
-    agent any
+    agent {
+      dockerfile true
+    }
 
     stages {
         stage('Hello') {
             steps {
-                echo 'Hello World'
+                bat 'docker version'
             }
         }
     }
