@@ -4,7 +4,6 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'node --version'
-               docker system prune --all
             }
         }
     }
