@@ -1,2 +1,2 @@
-FROM node:16-alpine
-RUN apk add -U git curl
+FROM node:20.10.0-alpine3.19
+RUN apk add -U subversion
